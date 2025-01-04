@@ -13,37 +13,62 @@
             background-color:gold;
         }
 
-        .fontsize-18px {
-            font-size: 40px;
+        .fundo-laranja {
+            background-color: orange;
+        
         }
     </style>
 </head>
 <body>
-    <h1 id="cabecalho-um" class="fontsize-18px">
+    <h1 id="cabecalho-um">
         Projetinho HTML de aprendizagem
     </h1>
+    <aside>
+        <nav>
+            <ol>
+                <li><a href="#">Texto 1</a></li>
+                <li><a href="#">Texto 2</a></li>
+            </ol>
+        </nav>
+    </aside>
     <hr>
-    <img src="https://ayltoninacio.com.br/img/p/32w1500.jpg" alt="Imagem da logo de HTML e CSS" width="200px" height="100px">
-    <a href="https://youtu.be/4gXdJhXS-DY?si=VKhIv9JrNiDjuMLh" target="_blank">
-        <h2 id="cabecalho-dois" class="fontsize-18px">
-            Curso do Otávio Miranda
-        </h2>
-    </a>
-    <p><b>Lorem</b> <i>ipsum dolor</i> sit amet consectetur, adipisicing elit. Minus numquam optio voluptatum accusamus eos nam, quidem nostrum dolorum debitis consectetur <a href="https://www.google.com/search?q=odio+latim&oq=odio+latim&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIKCAEQABiABBiiBDIHCAIQABjvBdIBCDU1MjVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank">odio</a> dolor veritatis delectus iste quos iure, adipisci quisquam ab!</p>
-    <h3 style="background: orangered;">Subtítulo</h3>
-    <p>
-        <q><strong>Lorem</strong> <em>ipsum dolor</em></q> sit amet consectetur adipisicing elit.
-        Sed, nobis consequatur sit, numquam <del>fugir</del> <ins>fugit</ins> temporibus nam
-        distinctio dolorum aspernatur rerum consectetur optio, omnis fugiat incidunt sunt 
-        sequi in ducimus porro.
-    </p>
-    <blockquote cite="https://pt.wikipedia.org/wiki/Lorem_ipsum">
-        <p>A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações (jornais, revistas, e sites) para testar e ajustar aspectos visuais</p>
-     </blockquote>
-    <h4>Sub-título</h4>
-    <p>
-        <u>Lorem ipsum</u> dolor sit amet <span style="color: blue;">consectetur</span> adipisicing elit. <br>Dolores in minima beatae eaque, modi exercitationem. <br>Qui commodi cumque minus perspiciatis neque cum, <br><small>ratione</small>, quasi quisquam quam blanditiis, officiis quaerat <s>aperiam</s>.
-    </p>
-    <div style="color: brown;"> FIM</div>
+    <img src="https://ayltoninacio.com.br/img/p/32w1500.jpg" alt="Imagem da logo de HTML e CSS" width="200" height="100">
+    <header>
+        <a href="https://youtu.be/4gXdJhXS-DY?si=VKhIv9JrNiDjuMLh" target="_blank">
+            <h2 id="cabecalho-dois" style="font-size: 25px;">
+                Curso do Otávio Miranda
+            </h2>
+        </a>
+        <p><b>Lorem</b> <i>ipsum dolor</i> sit amet consectetur, adipisicing elit. Minus numquam optio voluptatum accusamus eos nam, quidem nostrum dolorum debitis consectetur <a href="https://www.google.com/search?q=odio+latim&oq=odio+latim&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIKCAEQABiABBiiBDIHCAIQABjvBdIBCDU1MjVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank">odio</a> dolor veritatis delectus iste quos iure, adipisci quisquam ab!</p>
+    </header>
+
+    <section>
+        <h3 class="fundo-laranja">Subtítulo</h3>
+        <article>
+            <h4>Sub</h4>
+            <p>
+                <q><strong>Lorem</strong> <em>ipsum dolor</em></q> sit amet consectetur adipisicing elit.
+                Sed, nobis consequatur sit, numquam <del>fugir</del> <ins>fugit</ins> temporibus nam
+                distinctio dolorum aspernatur rerum consectetur optio, omnis fugiat incidunt sunt 
+                sequi in ducimus porro.
+            </p>
+            <blockquote cite="https://pt.wikipedia.org/wiki/Lorem_ipsum">
+            <p>A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações (jornais, revistas, e sites) para testar e ajustar aspectos visuais</p>
+            </blockquote>
+            <div style="color:chocolate;">Ajuste</div>
+        </article>
+    </section>
+    <section>
+        <header>
+            <h3 class="fundo-laranja">Sub-título</h3>
+            <p>
+                <u>Lorem ipsum</u> dolor sit amet <span style="color: blue;">consectetur</span> adipisicing elit. <br>Dolores in minima beatae eaque, modi exercitationem. <br>Qui commodi cumque minus perspiciatis neque cum, <br><small>ratione</small>, quasi quisquam quam blanditiis, officiis quaerat <s>aperiam</s>.
+            </p>
+        </header>
+    </section>
+    <footer>
+        Meu endereço:
+        <address>Rua Antonio José</address>
+    </footer>
 </body>
 </html>

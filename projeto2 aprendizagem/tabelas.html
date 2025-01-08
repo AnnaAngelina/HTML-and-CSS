@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        table th, table td {
+            padding: 5px;
+            text-align: left;
+        }
+
+        table tbody tr {
+            border: 1px solid #ccc
+        }
+
+        table {
+            border: 1px solid #ccc;
+            width: 500%;
+            border-collapse: collapse;
+        }
+
+        #responsive {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+        table caption {
+            caption-side: bottom;
+            text-align: left;
+            font-size: 12px;
+            font-family: sans-serif;
+            font-style: italic;
+            margin: 5px 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="responsive">
+        <table>
+            <caption>Descrição</caption>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Salário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maria</td>
+                    <td>Graça</td>
+                    <td>4500</td>
+                </tr>
+                <tr>
+                    <td>Anna</td>
+                    <td>Angelina</td>
+                    <td>5600</td>
+                </tr>
+                <tr>
+                    <td>Thomas</td>
+                    <td colspan="2">Gabriel</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" rowspan="2"></td>
+                    <td>Total:</td>
+                </tr>
+                <tr>
+                    <td>R$10100</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>

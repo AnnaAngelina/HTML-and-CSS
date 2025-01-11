@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-style: italic;
+}
+
+div section p,
+div section h1 {
+    color: darkslategray;
+}
+
+header p {
+    font-family: sans-serif;
+}
+
+.background-colordarkblue {
+    background-color: darkblue;
+}
+
+.background-colordarkblue .colorgrey,
+.background-colordarkblue h2 {
+    color: darkcyan;
+}
+
+.escuro {
+    color: darkslategray;
+}
+
+h2.escuro {
+    background-color: darkcyan;
+}
+
+.pai > .filha{
+    font-size: 24px;
+}
+

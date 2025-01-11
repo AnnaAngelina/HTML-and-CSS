@@ -1,0 +1,15 @@
+.div1 {
+    background-color:crimson;
+    width: 60px;
+    height: 60px;
+}
+.div2 {
+    background-color: crimson;
+    width: 60px;
+    height: 60px;
+}
+
+header {
+    justify-content: space-between;
+    display: flex;
+}

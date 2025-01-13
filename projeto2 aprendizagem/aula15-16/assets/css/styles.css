@@ -37,3 +37,14 @@ h2.escuro {
     font-size: 24px;
 }
 
+.pai2 h1+p {
+    color: cornflowerblue;
+}
+
+.pai2 h2~p {
+    color: darkblue;
+}
+
+[meu-atributo] {
+    font-family: monospace;
+}

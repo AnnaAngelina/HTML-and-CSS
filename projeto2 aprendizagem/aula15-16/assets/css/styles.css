@@ -48,3 +48,21 @@ h2.escuro {
 [meu-atributo] {
     font-family: monospace;
 }
+
+[meu-atributo~="valor1"] {
+    color: darkorange;
+}
+
+[meu-atributo|="valor"] {
+    color:darkgoldenrod;
+}
+[meu-atributo^="oi"] {
+    color: red;
+}
+[meu-atributo$="tarde"] {
+    color:chocolate;
+}
+[meu-atributo*="but"] {
+    color:coral;
+}
+

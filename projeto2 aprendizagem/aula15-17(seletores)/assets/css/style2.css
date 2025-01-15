@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.heading p {
+    display: block;
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    
+}
+
+.heading h1 {
+    display: block;
+    width: 400px;
+    height: 40px;
+}
+
+.heading a {
+    text-decoration: none;
+}
+
+.heading div {
+    display: flex;
+}
+
+.heading div p:hover {
+    background: gainsboro;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: deeppink;
+}
+
+input:checked + .heading h1{
+    border: 5px deeppink solid;
+}
+
+.pai .lista li:first-child {
+    color: crimson;
+}

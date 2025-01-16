@@ -26,6 +26,11 @@
     display: flex;
 }
 
+.heading p:nth-child(odd) {
+    background-color:floralwhite;
+}
+
+
 .heading div p:hover {
     background: gainsboro;
 }
@@ -44,4 +49,28 @@ input:checked + .heading h1{
 
 .pai .lista li:first-child {
     color: crimson;
+}
+
+.pai .lista li:last-child {
+    color: crimson;
+}
+
+p:not(.ultima) {
+    color:darkslategray;
+}
+
+.lista2 li:first-child,  .lista2 li:last-child{
+    background-color:hotpink;
+}
+
+.lista2 li:nth-child(2) {
+    background: darkseagreen;
+}
+
+.lista2 li:nth-child(3n) {
+    background: darkkhaki;
+}
+
+.lista2 li:nth-child(3n+5) {
+    background: darksalmon;
 }

@@ -93,3 +93,15 @@ p:not(.ultima) {
 .lista2 li:nth-child(3n+5) {
     background: darksalmon;
 }
+
+.div ul li::after {
+    content: '------------';
+    display: block;
+}
+
+ul::before {
+    content: 'Lista';
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    font-style: italic;
+}

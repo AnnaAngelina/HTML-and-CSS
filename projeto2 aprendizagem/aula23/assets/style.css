@@ -6,7 +6,16 @@ html body {
     background-color: cornflowerblue;
     max-width: 50%;
     min-width: 200px;
-    
-    max-height: 500%;
     min-height: 100%;
+}
+
+.div2 {
+    box-sizing:border-box;
+    background-color: firebrick;
+    max-width: 500px;
+    min-width: 500px;
+    min-height: 500px;
+    padding: 10px;
+    border: 10px solid orangered;
+    margin: 20px;
 }

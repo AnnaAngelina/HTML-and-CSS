@@ -1,0 +1,15 @@
+p {
+    font-size: 30px;
+    /* font-weight:bold; */
+    direction: ltr;
+    letter-spacing: 2px;
+    /* word-break:break-all; */
+    word-wrap:break-word;
+    word-spacing: 9px;
+    line-height: 40px;
+    /* text-align:center; */
+    text-decoration:underline;
+    text-indent: 50px;
+    text-shadow: -2px -2px 2px coral;
+    text-transform:none;
+}

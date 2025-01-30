@@ -38,7 +38,7 @@ body .div3 {
     position: relative;
 }
 
-.div3 .child {
+.div3 > .child {
     display: inline;
     background-color: bisque;
     position: relative;

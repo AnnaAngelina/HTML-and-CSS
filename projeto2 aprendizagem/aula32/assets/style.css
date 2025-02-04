@@ -1,0 +1,8 @@
+.pai {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
+    background-color: pink;
+    height: 500px;
+}

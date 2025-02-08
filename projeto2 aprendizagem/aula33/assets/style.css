@@ -1,0 +1,23 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-rows: [um] 1fr [dois] 1fr [tres] 1fr;
+    gap: 30px 40px;
+}
+
+.grid div:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    z-index: 2;
+}
+
+.grid div:nth-child(9) {
+    /* grid-row: span 3; */
+    /* grid-column: 4 / 1; */
+    grid-area: 4 / 1 / 4 / 4;
+}
+
+.grid div {
+    background-color: lightcoral;
+    min-height: 100px;
+}

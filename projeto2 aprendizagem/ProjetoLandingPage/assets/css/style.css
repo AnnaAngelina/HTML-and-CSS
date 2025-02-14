@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+p {
+    line-height: 3rem;
+    font-size: 2rem;
+}
+
 a {
     text-decoration: none;
 }
@@ -63,6 +68,10 @@ h6 {
     background-size: cover;
     background-position: center center;
     color: var(--white-color);
+}
+
+.menu-spacing {
+    height: 6.5rem;
 }
 
 .white-bg {
@@ -134,4 +143,31 @@ h6 {
     left: 0;
     width: 100%;
     box-shadow: 0 0.1rem 0.1rem 0 var(--light-gray);
+    z-index: 2;
 }
+
+.intro-content {
+    position: relative;
+    top: -6rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap);
+    height: 100vh;
+
+}
+
+.intro-text, .img-intro {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.intro-text h2{
+    margin-bottom: 4rem;
+}
+
+.img-intro img{
+    max-width: 100%;
+    height: auto;
+}
+

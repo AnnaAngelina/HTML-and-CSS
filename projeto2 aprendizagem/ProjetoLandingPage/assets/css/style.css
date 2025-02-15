@@ -156,7 +156,7 @@ h6 {
 
 }
 
-.intro-text, .img-intro {
+.intro-text, .img-intro{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -171,3 +171,22 @@ h6 {
     height: auto;
 }
 
+.top3 {
+    max-width: 80rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: var(--gap);
+    justify-content: center;
+}
+
+.top3 h2 {
+    margin-bottom: 4rem;
+    display: block;
+    align-self: center;
+}
+
+.top3 p {
+    margin: 2rem 0;
+    text-align: center;
+}

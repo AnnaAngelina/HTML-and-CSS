@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 p {
@@ -148,7 +149,7 @@ h6 {
 
 .intro-content {
     position: relative;
-    top: -6rem;
+    top: -2rem;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
@@ -172,7 +173,7 @@ h6 {
 }
 
 .top3 {
-    max-width: 80rem;
+    max-width: 64rem;
     height: 100vh;
     display: flex;
     flex-direction: column;

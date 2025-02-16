@@ -11,20 +11,20 @@
 <body>
     <aside class="menu white-bg">
         <div class="content">
-            <h1><a href="#">Logo</a></h1>
+            <h1><a href="#logo">Logo</a></h1>
             <nav>
                 <ul>
                     <li><a href="#intro">intro</a></li>
                     <li><a href="#top3">top 3</a></li>
-                    <li><a href="#">gallery</a></li>
                     <li><a href="#">work</a></li>
+                    <li><a href="#">gallery</a></li>
                     <li><a href="#">contact</a></li>
                 </ul>
             </nav>
         </div>
     </aside>
     <div class="menu-spacing"></div>
-    <section class="main-bg section">
+    <section id="logo" class="main-bg section">
         <div class="main-content intro-content">
             <div class="intro-text">
                 <h2>January brings us Firefox 85</h2>
@@ -49,7 +49,26 @@
     </section>
     <div class="menu-spacing"></div>
     <section id="top3" class="main-bg section">
-
+        <div class="main-content jobs">
+            <header class="header-jobs">
+                <h2>Top 3 Jobs</h2>
+                <p>Here are some recent work.</p>
+            </header>
+            <div class="grid">
+                <article>
+                    <h3>First</h3>
+                    <p>This button would add a box to the row of key content boxes below the intro text. This should put the box there regardless of where the user is currently writing.</p>
+                </article>
+                <article>
+                    <h3>Another site</h3>
+                    <p>I'd suggest having a popup that asks where in the row to insert the box (at the beginning or end), what title to give the box, what text to put in the box, and where the box should link to. The entire box should serve as a link to the destination page.</p>
+                </article>
+                <article>
+                    <h3>Third one</h3>
+                    <p>You can also include a type attribute containing the MIME type of the resource, so a browser can quickly see what resources are on offer, and ignore ones that it doesn’t support</p>
+                </article>
+            </div>
+        </div>
     </section>
 </body>
 </html>

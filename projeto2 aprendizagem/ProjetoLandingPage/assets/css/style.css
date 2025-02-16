@@ -48,20 +48,7 @@ h2 {
     text-transform: uppercase;
 }
 h3 {
-    font-size: 5.5rem;
-    text-transform: uppercase;
-}
-h4 {
-    font-size: 5rem;
-    text-transform: uppercase;
-}
-h5 {
-    font-size: 4.5rem;
-    text-transform: uppercase;
-}
-h6 {
-    font-size: 4rem;
-    text-transform: uppercase;
+    font-size: 2rem;
 }
 
 .main-bg {
@@ -182,7 +169,7 @@ h6 {
 }
 
 .top3 h2 {
-    margin-bottom: 4rem;
+    margin: 4rem 0;
     display: block;
     align-self: center;
 }
@@ -190,4 +177,45 @@ h6 {
 .top3 p {
     margin: 2rem 0;
     text-align: center;
+}
+
+.jobs {
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    counter-reset: colunas-counter;
+}
+
+.jobs article h3 {
+    padding: 2rem 5rem;
+}
+
+.jobs article {
+    position: relative;
+}
+
+.jobs article h3::before {
+    counter-increment: colunas-counter;
+    content: counter(colunas-counter);
+    position: absolute;
+    left: -2rem;
+    font-size: 7rem;
+    top: 0;
+    transform: rotate(5deg);
+    font-style: italic;
+}
+
+.header-jobs {
+    margin-bottom: 8rem; 
+}
+
+.header-jobs p {
+    margin-top: 2rem;
 }

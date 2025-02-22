@@ -1,0 +1,46 @@
+{% load static %}
+
+    <input id="fechar-menu" class="fechar-menu" type="checkbox" aria-label="fechar menu" role="botao">
+    <label class="botao-menu" for="fechar-menu"></label>
+    <aside class="menu">    
+        <div class="container-fluid content">
+            <a class="navbar-brand" href="{% url 'mysite:home' %}"><img src="{% static 'mysite/images/logo-nadic-sem-fundo (1).png' %}" alt="Logo do NADIC"></a>
+
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> -->
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="{% url 'trilhas:lista' %}" >Trilhas</a>
+                    </li>
+                    {% if request.user.is_authenticated %}
+                    {% if request.user.is_admin %}
+                        <li class="nav-item"> 
+                        <a class="nav-link" href="{% url 'perfis:lista_perfil' %}">Alunos</a> 
+                        </li>
+                    {%endif%}
+
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="{% url 'contas:logout' %}">Logout</a> 
+                    </li>
+
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="{% url 'perfis:perfil_view' request.user.id %}">Meu perfil</a> 
+                    </li>
+
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contas:login' %}">Login</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="{% url 'mysite:type_user' %}" >Registrar-se</a> 
+                    </li>
+                    {% endif %} 
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'projeto:projetos' %}">Projetos</a>
+                    </li>
+                <ul>
+            </nav>
+        </div>
+    </aside>

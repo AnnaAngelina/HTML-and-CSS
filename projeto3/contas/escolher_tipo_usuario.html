@@ -1,0 +1,25 @@
+{%extends 'mysite/base/base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '\contas\css\style.css' %}">
+</head>
+<body>
+    <div class="base-choice">
+        <div class="fundo">
+            <h2>Você é aluno ou professor?</h2>
+            <ul>
+                <li><a href="{% url 'contas:register_comum'    %}" class="btn btn-primary">Aluno</a></li>
+                <li><a href="{% url 'contas:admin_register'    %}" class="btn btn-primary">Professor</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

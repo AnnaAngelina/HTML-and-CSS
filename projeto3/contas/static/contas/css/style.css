@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ffffff;
+    --main-color: #324c7a;
+    --main-color2: #627ca4;
+    --main-color3: #345482;
+    --main-color4: #E4E8EF;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: 8rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+.content-form {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.campo-login {
+    position: relative;
+    width: 70rem;
+    height: 50rem;
+    background-color: var(--main-color4);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.campo-login h2{
+    padding-bottom: 3rem;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forms input {
+    width: 30rem;
+    height: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 2rem;
+    border: solid 0.1rem gray;
+    padding: 2rem;
+}
+
+.forms input::placeholder {
+    padding-left: 1rem;
+}
+
+.forms .botao {
+    width: 10rem;
+    height: 3rem;
+    margin: 1.5rem;
+    border-radius: 3rem;
+    border: 0;
+    background-color: var(--main-color);
+    color: var(--primary-color);
+}
+
+.base-choice {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fundo {
+    width: 70vw;
+    height: 50vh;
+    border-radius: 3rem;
+    background-color: var(--main-color4);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fundo ul li a{
+    border-radius: 3rem;
+    border: 0;
+    background-color: var(--main-color);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 1vh 2vh;
+    margin: 0 2rem;
+}
+
+.fundo ul {
+    display: flex;
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.fundo h2 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 846px) and (max-width: 1271px) {
+    .base-template {
+        width: 100vw;
+        background-color: var(--primary-color);
+        display: grid;
+        grid-template-columns: 0.5fr 1.5fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: 
+        'nav escolha'
+        'nav rodape';
+    }
+
+    .campo-login {
+        width: 70vw;
+    }
+
+    .base-choice {
+        grid-area: escolha;
+    }
+
+    .fundo h2 {
+        font-size: 5vh;
+    }
+
+}
+
+@media (max-width: 845px){ 
+    .campo-login {
+        width: 80vw;
+    }
+
+    .forms input {
+        width: 40vw;
+    }
+    
+    .forms .botao {
+        width: 10vh;
+    }
+    
+    .fundo h2 {
+        font-size: 4vh;
+    }
+
+    .fundo ul li a{
+        margin: 0 1rem;
+    }
+
+}

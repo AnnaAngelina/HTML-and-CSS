@@ -1,0 +1,34 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="{% static 'mysite\css\style.css' %}">
+        <link rel="stylesheet" href="https://use.typekit.net/qjh7tei.css">
+        <link rel="stylesheet" href="{% static 'trilhas\static\css\style.css' %}">
+    </head>
+<body> 
+    <div class="base-template">
+        {%include 'mysite/base/navbar.html'%}
+        {%block content%} {%endblock%}
+        {%include 'mysite/base/js.html'%}
+        <footer class="rodape">
+        <address>
+            <div>
+                <h3>Equipe</h3>
+                Informações<br>
+                Informações
+            </div>
+            <div>
+                <h3>Contatos</h3>
+                Informações<br>
+                Informações
+            </div>
+            </address>
+        </footer>
+    </div>
+    
+</body>
+</html>

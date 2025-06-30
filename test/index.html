@@ -1,0 +1,190 @@
+{% extends 'mysite/base/base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div class="template-home-base">
+        <section class="presentation">
+            <div class="intro-presentation">
+                <div>
+                    <h1>Núcleo de <span class="degrade">Análise de Dados</span> e <span class="degrade">Inteligência Computacional</span></h1>
+                </div>
+                <img src="{% static 'mysite/images/computador.png' %}" alt="computador em cima de uma mesa com uma apresentação">
+            </div>
+            <div class="informacoes-absolutas">
+                <div class="itens">
+                    <div class="projects">
+                        <h3><span class="degrade">{{ quantidade_projetos }}</span> projetos</h3>
+                    </div>
+                    <div class="trilhas">
+                        <h3><span class="degrade">{{ quantidade_trilhas }}</span> trilhas</h3>
+                    </div>
+                    <div class="trilheiros">
+                        <h3><span class="degrade">{{ quantidade_usuario }}</span> trilheiros</h3>
+                    </div>
+                </div>
+                <img class="colaboradores" src="{% static 'mysite/images/colaboradores.png' %}" alt="logos dos parceiros do Nadic">
+            </div>
+        </section>
+        <section class="home-intro">
+            <div class="intro-content">
+                <div class="elements-home">
+                    
+                    <img class="stars" src="{% static 'mysite/images/estrelas.png' %}" alt="5 estrelas">
+                    <h2>Projetos</h2>
+                    {% if not projetos %}
+                        <p class="not-projects">Não há projetos</p>
+                    {% else %}
+
+                        <div class="carrossel">
+                            {% if page_obj.has_next %}
+                                <a href="?page={{ page_obj.next_page_number }}" class="back"><p>&lt;</p>
+                                </a>
+                            {%endif%}
+
+                            {% if page_obj.has_previous %}
+                                <a href="?page=1" class="back"><p>&lt;</p></a>
+                            {%endif%}
+
+                            <div class="grid-home">
+                                
+                                {% for projeto in projetos %}    
+                                    <div class="content-home">   
+                                        
+                                        <a href="{%url 'projeto:project_detail' projeto.slug %}" class="destaque-content">
+                                            {% if projeto.imagem_projeto %}
+                                                <img class="img" src="{{ projeto.imagem_projeto.url }}" alt="{{ projeto.nome }}">
+                                            {% else %}
+                                                <div class="img no-image"></div>
+                                            {% endif %}
+                                            
+                                            <h3 class="name">{{projeto.nome}}</h3>
+
+                                                {% csrf_token %}
+                                                <button class="btn btn-outline- project-detail" name="acao" value="detail" type="submit">
+                                                    <span class="material-symbols-outlined">
+                                                    arrow_forward
+                                                    </span>
+                                                </button> 
+                                        </a>
+                                    </div>
+                    
+                                {%endfor%}
+                    
+                            </div>
+                        
+                            {% if page_obj.has_next %}
+                                <a href="?page={{ page_obj.paginator.num_pages }}" class="next"><p>&gt;</p>
+                                </a>
+                            {%endif%}
+
+                            {% if page_obj.has_previous %}
+                            <a href="?page={{ page_obj.previous_page_number }}" class="next">
+                                <p>
+                                    <span class="material-symbols-outlined">
+                                        arrow_forward
+                                    </span>
+                            </p></a>
+                            {% endif %}
+
+                        </div>
+                        
+                    <div class="pagination">
+                        <span class="step-links">
+                            <span class="current">
+                                Pagina {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+                            </span>
+                        </span>
+                    </div>
+
+                    {% endif %}
+                    
+                </div>
+
+                <!-- trilhas -->
+
+                <div class="elements-home">
+                    
+                    <img class="stars" src="{% static 'mysite/images/estrelas.png' %}" alt="5 estrelas">
+                    <h2>trilhas</h2>
+                    {% if not trilhas %}
+                        <p class="not-projects">Não há trilhas disponíveis</p>
+                    {% else %}
+
+                        <div class="carrossel">
+                            {% if trilhas.has_next %}
+                                <a href="?page={{ page_obj.next_page_number }}" class="back"><p>&lt;</p>
+                                </a>
+                            {%endif%}
+
+                            {% if trilhas.has_previous %}
+                                <a href="?page=1" class="back"><p>&lt;</p></a>
+                            {%endif%}
+
+                            <div class="grid-home">
+                                
+                                {% for trilha in trilhas %}    
+                                    <div class="content-home">
+                                        
+                                        <a href="{%url 'trilhas:trilha_detail' trilha.slug %}" class="destaque-content">
+                                            {% if trilha.imagem %}
+                                                <img class="img" src="{{ trilha.imagem.url }}" alt="{{ trilha.nome }}">
+                                            {% else %}
+                                                <div class="img no-image"></div>
+                                            {% endif %}
+                                            
+                                            <h3 class="name">{{trilha.nome}}</h3>
+                                            <button class="btn btn-outline- trilhas-detail" name="acao" value="detail" type="submit">
+                                                <span class="material-symbols-outlined">
+                                                arrow_forward
+                                                </span>
+                                            </button> 
+                                        </a>
+                                    </div>
+                    
+                                {%endfor%}
+                    
+                            </div>
+                        
+                            {% if trilhas.has_next %}
+                                <a href="?page={{ page_obj.paginator.num_pages }}" class="next"><p>&gt;</p>
+                                </a>
+                            {%endif%}
+
+                            {% if trilhas.has_previous %}
+                            <a href="?page={{ page_obj.previous_page_number }}" class="next">
+                                <p>
+                                    <span class="material-symbols-outlined">
+                                        arrow_forward
+                                    </span>
+                            </p></a>
+                            {% endif %}
+
+                        </div>
+                        
+                    <div class="pagination">
+                        <span class="step-links">
+                            <span class="current">
+                                Pagina {{ trilhas.number }} de {{ trilhas.paginator.num_pages }}.
+                            </span>
+                        </span>
+                    </div>
+
+                    {% endif %}
+                    
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+
+{% endblock %}

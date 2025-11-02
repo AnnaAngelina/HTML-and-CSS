@@ -1,0 +1,17 @@
+OVERFLOW - 
+Define o que acontece com um elemento filho que extravasa um elemento pai. Precisa de valores de altura e largura bem definidos para não permitir uma expansão
+- visible
+- hidden
+- scroll
+- auto
+
+FLOAT - 
+Permite que elementos flutuem a direita ou a esquerdade de um elemento
+- left
+- right
+- none
+
+CLEAR - remove os efeitos do float em outros elementos
+- right
+- left
+- both
